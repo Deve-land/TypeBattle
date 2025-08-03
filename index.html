@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+    <title>TypeBattle - تست سرعت تایپ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TypeBattle</h1>
+            <div class="timer">
+                <span id="time">60</span>
+                <span class="timer-label">ثانیه</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="test-area">
+                <div class="live-stats" id="liveStats" style="display: none;">
+                    <div class="stat-item">
+                        <span class="stat-label">کاراکتر:</span>
+                        <span class="stat-value" id="liveChars">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">پیشرفت:</span>
+                        <span class="stat-value" id="liveProgress">0%</span>
+                    </div>
+                </div>
+                
+                <div class="text-display" id="textDisplay">
+                    متن نمونه برای شروع تست تایپ
+                </div>
+                
+                <textarea 
+                    id="textInput" 
+                    placeholder="تایپ کردن را شروع کنید..."
+                    disabled
+                ></textarea>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary">شروع تست</button>
+                <button id="resetBtn" class="btn btn-secondary" disabled>شروع مجدد</button>
+            </div>
+
+            <div class="results" id="results" style="display: none;">
+                <h2>نتایج تست</h2>
+                
+                <div class="error-analysis" id="errorAnalysis">
+                    <h3>تحلیل نتایج</h3>
+                    <div id="errorDetails"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
